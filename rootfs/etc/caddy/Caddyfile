@@ -1,0 +1,6 @@
+:80 {
+  log
+  try_files {path} /index.html
+  root * /usr/share/caddy
+  file_server
+}
