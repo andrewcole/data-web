@@ -22,7 +22,7 @@ function fetchData(next) {
       table_body += '<td>' + flight[3] + '</td>'
       table_body += '<td>' + flight[4] + '</td>'
       table_body += '<td>' + flight[5] + '</td>'
-      table_body += '<td>' + flight[6] + '</td>'
+      table_body += '<td>' + (flight[6] ?? '') + '</td>'
       table_body += '<td>' + (flight[7] ?? '0.0') + '</td>'
       table_body += '<td>' + (flight[8] ?? '0.0') + '</td>'
       table_body += '<td>' + (flight[9] ?? '0.0') + '</td>'
