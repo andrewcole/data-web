@@ -34,17 +34,9 @@ function fetchData(next) {
             table_body += '<td>' + flight[2] + '-' + flight[3] + '</td>'
             table_body += '<td>' + flight[4].substring(11,16) + '</td>'
             table_body += '<td>' + simplifiedMilliseconds((new Date(flight[5])) - new Date(flight[4])) + '</td>'
-            table_body += '<td>'
-            if (flight[6]) {
-                table_body += flight[6]
-            }
-            if (flight[6] && flight[7]) {
-                table_body += ' '
-            }
-            if (flight[7]) {
-                table_body += flight[7]
-            }
-            table_body += '</td>'
+            table_body += '<td>' + (flight[7] ?? '') + '</td>'
+            table_body += '<td>' + flight[8] + '</td>'
+            table_body += '<td></td>'
             table_body += '</tr>';
             $("#table_body").html(table_body);
         })
