@@ -28,10 +28,11 @@ function fetchData(next) {
         result.rows.forEach(flight => {
             table_body += '<tr class="table">'
             table_body += '<td><i class="fa-solid fa-plane"></i></td>'
+            table_body += '<td>' + flight[4].substring(0,10) + '</td>'
             table_body += '<td>' + flight[0] + '</td>'
             table_body += '<td>' + flight[1] + '</td>'
             table_body += '<td>' + flight[2] + '-' + flight[3] + '</td>'
-            table_body += '<td>' + flight[4] + '</td>'
+            table_body += '<td>' + flight[4].substring(11,16) + '</td>'
             table_body += '<td>' + simplifiedMilliseconds((new Date(flight[5])) - new Date(flight[4])) + '</td>'
             table_body += '<td>'
             if (flight[6]) {
